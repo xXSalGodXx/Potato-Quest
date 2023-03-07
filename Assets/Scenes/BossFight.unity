@@ -327,7 +327,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.011809394, y: 0.0062559247}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -338,7 +338,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.71657526, y: 0.5120417}
   m_EdgeRadius: 0
 --- !u!212 &803667173
 SpriteRenderer:
@@ -401,7 +401,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -4.1, z: 0}
   m_LocalScale: {x: 2.6157036, y: 2.4688625, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1466966267}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -439,7 +440,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &1314655362
 GameObject:
   m_ObjectHideFlags: 0
@@ -2899,12 +2900,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466966265}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.72, y: -3.47, z: 0}
-  m_LocalScale: {x: 1.8288, y: 2.6577, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.27526054, y: 0.2551782, z: 0}
+  m_LocalScale: {x: 0.69916177, y: 1.0764878, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 803667174}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1543253367
 GameObject:
@@ -3001,11 +3002,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29c4f624d0ef01c4c807863e02c55b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 100
   timeInvincible: 1.5
   timerSmall: 3
   timerBig: 5
-  smallFireBall: {fileID: 0}
-  bigFireBall: {fileID: 0}
+  smallFireBall: {fileID: 7174171778237240558, guid: 1c9871214126a634ca1f633216303881, type: 3}
+  bigFireBall: {fileID: 7086714650821925028, guid: 7e5092576c2373b4b9a3ad2bc075424a, type: 3}
 --- !u!1 &1556717186
 GameObject:
   m_ObjectHideFlags: 0
