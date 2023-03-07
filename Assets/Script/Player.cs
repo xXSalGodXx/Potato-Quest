@@ -63,11 +63,6 @@ public class Player : MonoBehaviour
         {
             lives--;
         }
-
-        if (other.gameObject.tag == "Boss")
-        {
-            score++;
-        }
     }
 
     private void LoadScene(string sceneName)

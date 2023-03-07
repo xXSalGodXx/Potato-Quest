@@ -68,7 +68,7 @@ public class Boss : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         Debug.Log("Boss Hit");
-        if (isInvincible != true)
+        if (isInvincible != true && other.gameObject.tag != "FireBall")
         {
             lives--;
         }
