@@ -33,6 +33,7 @@ public class Boss : MonoBehaviour
         if (timerSmall > 0)
         {
             timerSmall -= Time.deltaTime;
+            Launch();
         }
 
         if (isInvincible)
@@ -41,5 +42,12 @@ public class Boss : MonoBehaviour
             if (invincibleTimer < 0)
                 isInvincible = false;
         }
+    }
+
+    void Launch()
+    {
+        GameObject sFireBall = Instantiate(smallFireBall, transform.position);
+        sFireBall.GetComponent<Rigidbody2d>().AddRelativeForce(new Vector3 (0, launchVelocity, 0));
+        projectile.Launch(Vector2.down, 300);
     }
 }
