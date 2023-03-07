@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
 
         if(score >= 3)
         {
-            LoadScene("Menu");
+            LoadScene("End");
         }
 
         if (isInvincible)
@@ -54,6 +54,20 @@ public class Player : MonoBehaviour
         position.y = position.y + speed * vertical * Time.deltaTime;
 
         rigidbody2d.MovePosition(position);
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("Got Hit");
+        if (isInvincible != true && other.gameObject.tag != "Boss")
+        {
+            lives--;
+        }
+
+        if (other.gameObject.tag == "Boss")
+        {
+            score++;
+        }
     }
 
     private void LoadScene(string sceneName)

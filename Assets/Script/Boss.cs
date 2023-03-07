@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boss : MonoBehaviour
 {
@@ -29,7 +30,9 @@ public class Boss : MonoBehaviour
         if (lives <= 0)
         {
             Destroy(gameObject);
+            LoadScene("End");
         }
+
         //small fireball
         if (timerSmall > 0)
         {
@@ -62,6 +65,15 @@ public class Boss : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("Boss Hit");
+        if (isInvincible != true)
+        {
+            lives--;
+        }
+    }
+
     void LaunchSmall()
     {
         GameObject sFireBall = Instantiate(smallFireBall, transform.position, transform.rotation);
@@ -71,5 +83,10 @@ public class Boss : MonoBehaviour
     {
         GameObject bFireBall = Instantiate(bigFireBall, transform.position, transform.rotation);
         bFireBall.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3 (300, Random.Range(-range,range), 0));
+    }
+
+    private void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

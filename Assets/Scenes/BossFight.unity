@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 803667176}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2918,9 +2918,10 @@ GameObject:
   - component: {fileID: 1543253369}
   - component: {fileID: 1543253368}
   - component: {fileID: 1543253370}
+  - component: {fileID: 1543253371}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3008,6 +3009,32 @@ MonoBehaviour:
   timerBig: 5
   smallFireBall: {fileID: 7174171778237240558, guid: 1c9871214126a634ca1f633216303881, type: 3}
   bigFireBall: {fileID: 7086714650821925028, guid: 7e5092576c2373b4b9a3ad2bc075424a, type: 3}
+--- !u!61 &1543253371
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543253367}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.96, y: 0.96}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.96, y: 0.96}
+  m_EdgeRadius: 0
 --- !u!1 &1556717186
 GameObject:
   m_ObjectHideFlags: 0

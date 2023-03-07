@@ -13,7 +13,7 @@ public class FireBall : MonoBehaviour
 
     void update()
     {
-        if (transform.position.magnitude > 1000.0f)
+        if (transform.position.magnitude > 75.0f)
         {
             Destroy(gameObject);
         }
@@ -21,7 +21,7 @@ public class FireBall : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("HitSomething" + other);
+        Debug.Log("HitSomething");
         Destroy(gameObject);
     }
 }
