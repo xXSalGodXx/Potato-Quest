@@ -46,8 +46,7 @@ public class Boss : MonoBehaviour
 
     void Launch()
     {
-        GameObject sFireBall = Instantiate(smallFireBall, transform.position);
-        sFireBall.GetComponent<Rigidbody2d>().AddRelativeForce(new Vector3 (0, launchVelocity, 0));
-        projectile.Launch(Vector2.down, 300);
+        GameObject sFireBall = Instantiate(smallFireBall, transform.position, transform.rotation);
+        sFireBall.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3 (0, 300, 0));
     }
 }
