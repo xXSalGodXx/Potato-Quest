@@ -5,12 +5,13 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     int lives = 3;
+    public int range;
 
     public float timeInvincible = 1.5f;
     float invincibleTimer;
     bool isInvincible;
 
-    public float timerSmall = 3;
+    public float timerSmall = 1;
     public float timerBig = 5;
 
     public GameObject smallFireBall;
@@ -29,12 +30,29 @@ public class Boss : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
+        //small fireball
         if (timerSmall > 0)
         {
             timerSmall -= Time.deltaTime;
-            Launch();
         }
+
+        if (timerSmall <= 0)
+        {
+            LaunchSmall();
+            timerSmall = 1.5f;
+        }
+        //big fireball
+        if (timerBig > 0)
+        {
+            timerBig -= Time.deltaTime;
+        }
+
+        if (timerBig <= 0)
+        {
+            LaunchBig();
+            timerBig = 3f;
+        }
+
 
         if (isInvincible)
         {
@@ -44,9 +62,14 @@ public class Boss : MonoBehaviour
         }
     }
 
-    void Launch()
+    void LaunchSmall()
     {
         GameObject sFireBall = Instantiate(smallFireBall, transform.position, transform.rotation);
-        sFireBall.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3 (0, 300, 0));
+        sFireBall.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3 (300, Random.Range(-range,range), 0));
+    }
+    void LaunchBig()
+    {
+        GameObject bFireBall = Instantiate(bigFireBall, transform.position, transform.rotation);
+        bFireBall.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3 (300, Random.Range(-range,range), 0));
     }
 }
