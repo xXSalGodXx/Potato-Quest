@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 803667174}
   - component: {fileID: 803667173}
   - component: {fileID: 803667172}
+  - component: {fileID: 803667175}
+  - component: {fileID: 803667176}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -232,6 +234,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &803667175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803667171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c39998a666143244be55cb0a82b0108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4.5
+  timeInvincible: 1.5
+--- !u!50 &803667176
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803667171}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1543253367
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1543253369}
   - component: {fileID: 1543253368}
+  - component: {fileID: 1543253370}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -314,6 +352,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1543253370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543253367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c4f624d0ef01c4c807863e02c55b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeInvincible: 1.5
 --- !u!1 &1556717186
 GameObject:
   m_ObjectHideFlags: 0
