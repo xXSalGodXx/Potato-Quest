@@ -48,6 +48,15 @@ public class Player : MonoBehaviour
                 isInvincible = false;
         }
 
+        if (transform.position.x <= -10 || transform.position.x > 10 || transform.position.y < -6.5 || transform.position.y > 6.5)
+        {
+            if (isInvincible != true)
+            {
+                lives--;
+                invincibleTimer = 2.5f;
+            }
+        }
+
         liveCounter.text = lives.ToString();
     }
 
@@ -65,6 +74,7 @@ public class Player : MonoBehaviour
         if (isInvincible != true && other.gameObject.tag != "Boss")
         {
             lives--;
+            invincibleTimer = 2.5f;
         }
     }
 

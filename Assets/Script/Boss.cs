@@ -71,6 +71,7 @@ public class Boss : MonoBehaviour
         if (isInvincible != true && other.gameObject.tag != "FireBall")
         {
             lives--;
+            invincibleTimer = 2.5f;
         }
     }
 
