@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
     public float speed = 3.5f;
     int lives = 3;
+    public TextMeshProUGUI liveCounter;
     int score = 0;
 
     public float timeInvincible = 1.5f;
@@ -45,6 +47,8 @@ public class Player : MonoBehaviour
             if (invincibleTimer < 0)
                 isInvincible = false;
         }
+
+        liveCounter.text = lives.ToString();
     }
 
     void FixedUpdate()
@@ -58,7 +62,6 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Got Hit");
         if (isInvincible != true && other.gameObject.tag != "Boss")
         {
             lives--;
