@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4.5
-  liveCounter: {fileID: 0}
+  liveCounter: {fileID: 1616750894}
   timeInvincible: 2.5
 --- !u!50 &803667176
 Rigidbody2D:
